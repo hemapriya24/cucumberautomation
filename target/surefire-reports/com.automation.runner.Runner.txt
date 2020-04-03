@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.automation.runner.Runner
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 93.922 s <<< FAILURE! - in com.automation.runner.Runner
+Then user logout from account(Scenario: user place the order)  Time elapsed: 0.019 s  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+
+Scenario: user place the order  Time elapsed: 0.019 s  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+

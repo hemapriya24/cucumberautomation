@@ -47,6 +47,7 @@ public class StepDefinition extends Baseclass {
 	@Then("^user confirm whether it navigates to homepage screen$")
 	public void user_confirm_whether_it_navigates_to_homepage_screen() throws Throwable {
 		System.out.println("homepage displayed");
+		Thread.sleep(3000);
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.automation.runner;
 import java.io.IOException;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -11,10 +12,10 @@ import com.automation.helper.FileReaderManager;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src\\test\\java\\com\\automation\\feature", 
 glue="com\\automation\\stepdefinition",
+plugin = {"pretty","html:Report","rerun:Report/Rerun.txt"},
 
 monochrome = true, 
 dryRun = false, 
@@ -27,7 +28,12 @@ public class Runner
 	@BeforeClass
 	public static void setUp() throws IOException
 	{
+		
 String browserName=FileReaderManager.getInstance().getcrInstance().getBrowserName();
 driver=Baseclass.browserLaunch(browserName);
+	}
+	@AfterClass
+	public static void tearDown() {
+		driver.close();
 	}
 }

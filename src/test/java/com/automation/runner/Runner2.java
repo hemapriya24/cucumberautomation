@@ -25,7 +25,7 @@ import cucumber.api.junit.Cucumber;
                  strict = true,
                  dryRun=false)
 
-public class RunnerRerun {
+public class Runner2 {
 public static WebDriver driver;
 	
 	@BeforeClass
